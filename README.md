@@ -1,4 +1,5 @@
 # Terminal-Environment
+<p>All installations procedures is based on Ubuntu</p>
 
 ## Instalar [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 ```bash

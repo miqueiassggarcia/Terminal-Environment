@@ -19,8 +19,48 @@ sudo apt install curl git
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+### Add oh-my-zsh plugins
+#### zsh-autosuggestions
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
 
+#### Add the new plugin to .zshrc list
+```bash
+plugins=( 
+    # other plugins...
+    zsh-autosuggestions
+)
+```
 
+#### zsh-autosuggestions
+```bash
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+#### Add the new plugin to .zshrc list
+```bash
+plugins=( 
+    # other plugins...
+    zsh-syntax-highlighting
+)
+```
+
+## Install [exa](https://the.exa.website/)
+```bash
+sudo apt install exa
+```
+
+#### This is my aliases, change as you need
+```bash
+alias ls="exa -lbF --icons"
+alias l="exa -lbhmua --time-style=long-iso --color-scale --icons"
+alias lx="exa -lbhHigmuSa@ --time-style=long-iso --color-scale --icons"
+alias llt="exa -l --tree --icons"
+alias lt="exa --tree --level=2 --icons"
+alias llm="exa -lbGF --sort=modified --icons"
+alias lld="exa -lbhHFGmuSa --group-directories-first --icons"
+```
 
 ## Install [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 ```bash
